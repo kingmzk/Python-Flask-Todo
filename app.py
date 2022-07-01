@@ -30,10 +30,10 @@ def hello_world():
     return render_template('index.html', allTodo = allTodo)
    # return 'Hello, World!'
 
-@app.route('/show')
-def products():
-    allTodo = Todo.query.all()
-    print(allTodo)
+@app.route('/product')
+def product():
+    # allTodo = Todo.query.all()
+    # print(allTodo)
     return 'This is a product page'
 
 @app.route('/update/<int:sno>', methods=['GET','POST'])
