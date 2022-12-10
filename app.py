@@ -1,5 +1,5 @@
 # flask minimal app
-from flask import Flask, redirect, render_template, request, redirect
+from flask import Flask, render_template, request, redirect
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 
@@ -32,8 +32,8 @@ def hello_world():
 
 @app.route('/product')
 def product():
-    # allTodo = Todo.query.all()
-    # print(allTodo)
+    allTodo = Todo.query.all()
+    print(allTodo)
     return 'This is a product page'
 
 @app.route('/update/<int:sno>', methods=['GET','POST'])
